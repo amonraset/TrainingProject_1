@@ -145,7 +145,7 @@
         <scene sceneID="lcJ-Qc-nvL">
             <objects>
                 <viewController storyboardIdentifier="settingsViewController" id="Xj6-rc-Ix2" customClass="settingsViewController" customModule="TrainingProject_1" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" restorationIdentifier="settingsViewController" id="RsL-DH-rNB">
+                    <view key="view" contentMode="scaleToFill" id="RsL-DH-rNB">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>

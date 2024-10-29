@@ -15,9 +15,10 @@ class settingsViewController: UIViewController {
     }
 }
 
+
 let words = ["Apple", "Pear", "Watermelon", "Carrot", "Pickle", "Potato", "Tomato"]
 
-extension ViewController: UITableViewDataSource {
+extension settingsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return words.count
     }
