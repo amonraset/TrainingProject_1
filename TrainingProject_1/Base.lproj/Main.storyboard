@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VgF-h6-Uro">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VgF-h6-Uro">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--settings-->
+        <!--screen!1-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TrainingProject_1" customModuleProvider="target" sceneMemberID="viewController">
@@ -22,7 +22,7 @@
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DCq-JU-jl9">
                                 <rect key="frame" x="89" y="658" width="214" height="57"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button">
+                                <buttonConfiguration key="configuration" style="plain" title="Json">
                                     <backgroundConfiguration key="background">
                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </backgroundConfiguration>
@@ -47,7 +47,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eGV-UQ-HrV" secondAttribute="bottom" constant="200" id="nH0-ZM-Y4Z"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="settings" id="kCM-A6-gyq">
+                    <navigationItem key="navigationItem" title="screen!1" id="kCM-A6-gyq">
                         <barButtonItem key="rightBarButtonItem" title="Item" id="8vu-pi-BgA">
                             <connections>
                                 <segue destination="Xj6-rc-Ix2" kind="show" id="hzC-5S-FAs"/>
@@ -141,7 +141,7 @@
             </objects>
             <point key="canvasLocation" x="1716.7938931297708" y="3.5211267605633805"/>
         </scene>
-        <!--Settings View Controller-->
+        <!--screen 2-->
         <scene sceneID="lcJ-Qc-nvL">
             <objects>
                 <viewController storyboardIdentifier="settingsViewController" id="Xj6-rc-Ix2" customClass="settingsViewController" customModule="TrainingProject_1" sceneMemberID="viewController">
@@ -176,7 +176,7 @@
                             <constraint firstItem="Yxz-u8-d5e" firstAttribute="top" secondItem="rGA-Sy-TFO" secondAttribute="top" id="qeg-QR-scK"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Kmv-Ze-Kf4"/>
+                    <navigationItem key="navigationItem" title="screen 2" id="Kmv-Ze-Kf4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KZI-bY-F0x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
