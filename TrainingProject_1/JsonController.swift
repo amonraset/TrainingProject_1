@@ -14,10 +14,15 @@ class JsonController: UIViewController {
         let number: Int
     }
     
+  
     
     @IBOutlet weak var JsonText: UITextView!
+    
+    
     @IBAction func loadjson(_ sender: Any) {
         self.JsonText.text = "whats up"
+        loadJson()
+        //self.JsonText.text = loadJson.resum
     }
     
     
@@ -27,8 +32,9 @@ class JsonController: UIViewController {
     
     
     func loadJson(){
+        //var resum: String
         let stringUrl = "http://open-notify.org/Open-Notify-API/People-In-Space/"
-        guard let url = URL(string: stringUrl) else { return}
+        guard let url = URL(string: stringUrl) else { return }
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
             guard error == nil else {
                 print(error?.localizedDescription ?? "noDesc")
@@ -37,9 +43,11 @@ class JsonController: UIViewController {
             guard let spaceInfo = try? JSONDecoder().decode(SpaceInfo.self, from: data) else { print ("Error = cant parse Space Info")
                 return
             }
-            let y = JsonController.SpaceInfo.init(message: <#T##String#>, number: <#T##Int#>)
+            print ("\(spaceInfo)")
+           // resum = "\(spaceInfo)"
         }
-        
+        task.resume()
+        //return resum
     }
     
 }
