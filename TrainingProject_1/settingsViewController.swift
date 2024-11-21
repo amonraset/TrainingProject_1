@@ -10,8 +10,12 @@ import UIKit
 
 
 class settingsViewController: UIViewController {
+    
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
 }
 
@@ -38,4 +42,17 @@ extension settingsViewController: UITableViewDataSource {
     }
 }
 
-
+extension ViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let alert = UIAlertController(title: nil,
+                                      message: "вы нажали на: \(words[indexPath.row])",
+                                      preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+            alert.dismiss(animated: true)
+        }
+        alert.addAction(okAction)
+        present(alert, animated: true)
+    }
+}

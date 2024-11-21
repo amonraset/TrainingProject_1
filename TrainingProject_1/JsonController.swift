@@ -9,20 +9,19 @@ import UIKit
 
 class JsonController: UIViewController {
     
-    struct SpaceInfo: Decodable {
-        let message: String
-        let number: Int
-    }
     
-  
     
     @IBOutlet weak var JsonText: UITextView!
     
     
     @IBAction func loadjson(_ sender: Any) {
-        self.JsonText.text = "whats up"
-        loadJson()
-        //self.JsonText.text = loadJson.resum
+       
+        //метод серверного запроса с замыканием
+        load { text1, text2 in  //кортеж изучить тему!!!!
+            self.JsonText.text = "\(text1), \(text2)"
+        }
+        
+        //load(completion: { self.JsonText.text = "\($0), \($1)" })
     }
     
     
@@ -31,23 +30,38 @@ class JsonController: UIViewController {
     }
     
     
-    func loadJson(){
-        //var resum: String
-        let stringUrl = "http://open-notify.org/Open-Notify-API/People-In-Space/"
+    struct SpaceInfo: Decodable {
+        let message: String
+        let number: Int
+        let people: [Astronaut]
+    }
+    
+    struct Astronaut: Decodable {
+        let name: String
+        let craft: String
+    }
+    
+    func load(completion: @escaping (String, String) -> Void) { //СБегающее замыкание
+        
+        let stringUrl = "http://api.open-notify.org/astros.json"
         guard let url = URL(string: stringUrl) else { return }
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
             guard error == nil else {
                 print(error?.localizedDescription ?? "noDesc")
-            return }
-            guard let data = data else { return }
-            guard let spaceInfo = try? JSONDecoder().decode(SpaceInfo.self, from: data) else { print ("Error = cant parse Space Info")
                 return
             }
-            print ("\(spaceInfo)")
-           // resum = "\(spaceInfo)"
+            guard let Data = data else { return }
+            guard let spaceInfo = try? JSONDecoder().decode(SpaceInfo.self, from: Data) else {
+                print ("Error parse SpaceInfo")
+                return }
+           let text01 = "\(spaceInfo.number), \(spaceInfo.message)"
+            let uniqueSpaceCrafts = Set (spaceInfo.people.map { $0.craft})
+           let text02 = "Spacecraft: \(uniqueSpaceCrafts.joined(separator: ", "))"
+            
+            DispatchQueue.main.async {
+                completion(text01, text02)
+            }
         }
-        task.resume()
-        //return resum
+        task.resume ()
     }
-    
 }
