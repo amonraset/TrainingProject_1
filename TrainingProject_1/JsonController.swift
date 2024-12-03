@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import ProgressHUD
+
 
 class JsonController: UIViewController {
     
@@ -17,9 +19,11 @@ class JsonController: UIViewController {
     @IBAction func loadjson(_ sender: Any) {
        
         //метод серверного запроса с замыканием
+        ProgressHUD.animate()
         load { text1, text2 in  //кортеж изучить тему!!!!
             self.JsonText.text = "\(text1), \(text2)"
         }
+        ProgressHUD.dismiss()
         
         //load(completion: { self.JsonText.text = "\($0), \($1)" })
     }

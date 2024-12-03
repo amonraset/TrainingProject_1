@@ -14,7 +14,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TrainingProject_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eGV-UQ-HrV">
@@ -70,7 +70,7 @@
                 <navigationController id="WBz-Xr-7Wc" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="eyI-gt-Cvr"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="QAn-A7-3r8">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -85,12 +85,12 @@
         <scene sceneID="08k-Vs-vwx">
             <objects>
                 <viewController id="m5b-DR-JYg" customClass="JsonController" customModule="TrainingProject_1" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="jSF-OX-Grb">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="jSF-OX-Grb">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yIj-LH-kj8">
-                                <rect key="frame" x="16" y="119" width="361" height="677"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yIj-LH-kj8">
+                                <rect key="frame" x="16" y="72" width="361" height="699"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor"/>
@@ -98,7 +98,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kkf-tR-ADP">
-                                <rect key="frame" x="163" y="717" width="68" height="35"/>
+                                <rect key="frame" x="163" y="717" width="68" height="34.333333333333371"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="LOAD"/>
                                 <connections>
@@ -185,11 +185,11 @@
             <objects>
                 <viewController id="4Pf-Q3-A26" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JGP-VS-AST">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="DWe-2m-gen">
-                                <rect key="frame" x="-507" y="0.0" width="970" height="918"/>
+                                <rect key="frame" x="-507" y="0.0" width="970" height="869"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gFL-Ej-m9b"/>
@@ -217,17 +217,17 @@
         <!--Navigation Controller-->
         <scene sceneID="WH4-a5-wuP">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Rp-ou-ltc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="wEl-bQ-Lc3" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="bGa-LE-HMu"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="S65-qZ-FM8">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
                         <segue destination="L5w-4C-CGP" kind="relationship" relationship="rootViewController" id="0Fc-yd-GsD"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4Rp-ou-ltc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="230" y="765"/>
         </scene>
@@ -236,7 +236,7 @@
             <objects>
                 <viewController storyboardIdentifier="settingsViewController" id="Xj6-rc-Ix2" customClass="settingsViewController" customModule="TrainingProject_1" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RsL-DH-rNB">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="769"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="793"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Yxz-u8-d5e">
@@ -287,7 +287,7 @@
             <objects>
                 <viewController id="WyG-nC-cSM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7qS-or-M5A">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="769"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2nD-Et-IVv">
@@ -317,8 +317,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="0Fc-yd-GsD"/>
-        <segue reference="fCY-ZC-uIT"/>
+        <segue reference="3vT-FB-2tC"/>
         <segue reference="rZD-Qi-oBu"/>
         <segue reference="pyS-kT-RP8"/>
     </inferredMetricsTieBreakers>
@@ -333,10 +332,10 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray2Color">
-            <color red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPinkColor">
-            <color red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

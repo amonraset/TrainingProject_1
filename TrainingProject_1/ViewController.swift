@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ProgressHUD
 
 class ViewController: UIViewController {
     
@@ -20,7 +21,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var PictureWeb: UIImageView!
     
     @IBAction func LoadButton(_ sender: Any) {
-        print("load")
+        print("load_")
     }
     @IBOutlet weak var LoadButton: UIButton!
     
@@ -36,21 +37,30 @@ class ViewController: UIViewController {
         PictureWeb.layer.cornerRadius = 8
         PictureWeb.layer.borderColor = UIColor.red.cgColor
         
-        let string = stringWeb3
-        
-        guard let url = URL(string: string) else { return }
-        
-        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
-            print ("done")
-            guard let data = data else { return }
-            DispatchQueue.main.async {
-                let image = UIImage(data: data)
-                self.PictureWeb.image = image
-            }
+        let string = stringWeb2
+        ProgressHUD.animate()
+        loadJSON()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            // Put your code which should be executed with a delay here
+           ProgressHUD.dismiss()
         }
-        task.resume()
-    }
+        
 
+func loadJSON() {
+    guard let url = URL(string: string) else { return }
+    
+    let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+        print ("done")
+        guard let data = data else { return }
+        DispatchQueue.main.async {
+            let image = UIImage(data: data)
+            self.PictureWeb.image = image
+        }
+    }
+    task.resume()
+}
+
+    }
 
 }
 
